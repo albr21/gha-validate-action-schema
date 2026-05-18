@@ -1,0 +1,19 @@
+name: gha-validate-action-schema
+description: |-
+  GitHub Action to validate GitHub action schema
+
+author: albr21
+branding:
+  icon: check-circle
+  color: green
+
+inputs:
+  action-file:
+    description: Path to the action file
+    required: false
+    default: ''
+
+
+runs:
+  using: docker
+  image: Dockerfile
