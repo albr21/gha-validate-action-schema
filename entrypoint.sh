@@ -1,7 +1,7 @@
 #!/bin/sh
 set -eu
 
-target="${INPUT_ACTION_PATH:-}"
+target="$(printenv 'INPUT_ACTION-PATH' || echo '')"
 
 if [ -z "$target" ]; then
   if [ -f "action.yml" ]; then
