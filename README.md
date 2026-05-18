@@ -1,10 +1,14 @@
-# <project-name>
+# gha-validate-action-schema
 
-<!-- A brief description of the project. -->
+GitHub Action to validate GitHub action schema.
 
 ## Usage
 
-<!-- Provide instructions on how to use the project, including code examples if applicable. -->
+```yaml
+steps:
+  - name: Validate action schema
+    uses: albr21/gha-validate-action-schema@1.0.0
+```
 
 ## Contributing
 

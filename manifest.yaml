@@ -1,8 +1,11 @@
-name: <project-name>
+name: gha-validate-action-schema
 description: |-
-  <project-description>
-version: 0.0.0
+  GitHub Action to validate GitHub action schema
+version: 1.0.0
 releases:
+  - version: 1.0.0
+    changes:
+      - Initial release
   - version: 0.0.0
     changes:
       - Under development
