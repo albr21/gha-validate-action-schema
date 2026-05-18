@@ -1,7 +1,7 @@
 #!/bin/sh
 set -eu
 
-target="${INPUT_ACTION-PATH:-}"
+target="${INPUT_ACTION_PATH:-}"
 
 if [ -z "$target" ]; then
   if [ -f "action.yml" ]; then
@@ -22,13 +22,13 @@ if check-jsonschema --schemafile "$schema_file" "$target"; then
   {
     echo "## Action Schema Validation: :white_check_mark:"
     echo ""
-    echo "\`${target}\` conforms to the [GitHub Actions schema](${schema_url})."
+    echo "\`${target}\` conforms to the [GitHub Actions schema](${schema_file})."
   } >> "$GITHUB_STEP_SUMMARY"
 else
   {
     echo "## Action Schema Validation: :x:"
     echo ""
-    echo "\`${target}\` does **not** conform to the [GitHub Actions schema](${schema_url})."
+    echo "\`${target}\` does **not** conform to the [GitHub Actions schema](${schema_file})."
   } >> "$GITHUB_STEP_SUMMARY"
   exit 1
 fi
