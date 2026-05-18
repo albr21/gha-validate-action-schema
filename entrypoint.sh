@@ -1,7 +1,7 @@
 #!/bin/sh
 set -eu
 
-target="${INPUT_ACTION-FILE:-}"
+target="${INPUT_ACTION-PATH:-}"
 
 if [ -z "$target" ]; then
   if [ -f "action.yml" ]; then

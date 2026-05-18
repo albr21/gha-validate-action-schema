@@ -8,11 +8,10 @@ branding:
   color: green
 
 inputs:
-  action-file:
+  action-path:
     description: Path to the action file
     required: false
     default: ''
-
 
 runs:
   using: docker
